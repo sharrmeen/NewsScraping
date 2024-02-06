@@ -72,3 +72,45 @@
 
 # summary = response.choices[0].text.strip()
 # print(summary)
+
+import requests
+
+# def summarize_url(url, api_key, summary_length=5):
+#     api_url = "https://api.smmry.com"
+#     params = {
+#         "SM_API_KEY": api_key,
+#         "SM_LENGTH": summary_length,
+#         "SM_URL": url,  # Use this instead of input_text if summarizing a URL
+#         "SM_WITH_BREAK": True  # Return summary with line breaks
+#     }
+#     response = requests.post(api_url, data=params)
+#     if response.status_code == 200:
+#         # Extract the summarized text from the response
+#         data = response.json()
+#         if 'sm_api_error' in data:
+#             return f"Error: {data['sm_api_error']}"
+#         else:
+#             summary = data.get("sm_api_content")
+#             return summary
+#     else:
+#         return f"Error: {response.status_code}"
+
+
+# # Example usage:
+# api_key = "460CBC23A1"
+# url="https://www.livemint.com/news/india/modi-unveils-projects-worth-over-rs-1-330-crore-in-goa-11707221147382.html"
+# summary = summarize_url(url, api_key)
+# print(summary)
+
+# def summry():
+# API_ENDPOINT = "https://api.smmry.com"
+# API_KEY = "460CBC23A1"
+
+# params = {
+#     "SM_API_KEY":API_KEY,
+#     "SM_URL":"https://news.google.com/articles/CBMiigFodHRwczovL3d3dy5uZHR2LmNvbS9pbmRpYS1uZXdzL3JhaHVsLWdhbmRoaS1iaGFyYXQtam9kby15YXRyYS1ob3ctaGF2ZS1kb2dzLWhhcm1lZC1ianAtcmFodWwtZ2FuZGhpLXJlc3BvbmRzLXRvLXZpcmFsLXB1cHB5LXZpZGVvLTUwMDQ5NDjSAQA?hl=en-IN&gl=IN&ceid=IN%3Aen"
+# }
+
+# r = requests.get(url=API_ENDPOINT, params=params)
+# print(r.json())
+

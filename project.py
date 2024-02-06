@@ -1,5 +1,6 @@
 import requests
 from news_scrap import get_newslist
+from newspaper import Article
 
 def main():
     news_list=get_newslist(5)
@@ -10,7 +11,9 @@ def print_news(news_list):
     for i in range(len(news_list)):
         title=news_list[i]['title']
         link=shorten_url(news_list[i]['link'])
+        summary=summarize_article(link)
         print(f"Title: {title}")
+        print(f"Summary: {summary}")
         print(f"Link: {link}")
         print("")
 
@@ -27,3 +30,16 @@ def shorten_url(long_url):
         return None
     
 
+def summarize_article(url):
+    # Fetch article content
+    article = Article(url)
+    article.download()
+    article.parse()
+
+    # Generate summary
+    article.nlp()
+    summary = article.summary
+
+    return summary
+
+main()
