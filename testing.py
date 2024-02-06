@@ -15,26 +15,26 @@
 #         return None
     
 
-# import requests
+import requests
 
-# def shorten_url(long_url):
-#     api_url = 'https://tinyurl.com/api-create.php'
-#     params = {'url': long_url}
-#     response = requests.get(api_url, params=params)
+def shorten_url(long_url):
+    api_url = 'https://tinyurl.com/api-create.php'
+    params = {'url': long_url}
+    response = requests.get(api_url, params=params)
     
-#     if response.status_code == 200:
-#         return response.text
-#     else:
-#         return None
+    if response.status_code == 200:
+        return response.text
+    else:
+        return None
 
-# # Example usage
-# long_url = 'https://www.example.com/very-long-url-that-needs-shortening'
+# Example usage
+long_url = 'https://news.google.com/articles/CBMid2h0dHBzOi8vd3d3Lm5kdHYuY29tL2luZGlhLW5ld3MvcmVhbC1uY3AtYWppdC1wYXdhci1lbGVjdGlvbi1jb21taXNzaW9uLXN1cHJpeWEtc3VsZS12aWN0b3J5LW9mLWludmlzaWJsZS1wb3dlci01MDA3MjI40gEA?hl=en-IN&gl=IN&ceid=IN%3Aen'
 
-# short_url = shorten_url(long_url)
-# if short_url:
-#     print('Shortened URL:', short_url)
-# else:
-#     print('Failed to shorten URL')
+short_url = shorten_url(long_url)
+if short_url:
+    print('Shortened URL:', short_url)
+else:
+    print('Failed to shorten URL')
 
 # import nltk
 # nltk.download('punkt')
@@ -73,7 +73,7 @@
 # summary = response.choices[0].text.strip()
 # print(summary)
 
-import requests
+
 
 # def summarize_url(url, api_key, summary_length=5):
 #     api_url = "https://api.smmry.com"
