@@ -4,7 +4,8 @@ from news_scrap import get_newslist
 from newspaper import Article
 
 def main():
-    news_list=get_newslist(5)
+    num=int(input("How many articles would you like to see ? "))
+    news_list=get_newslist(num)
     print_news(news_list)
     
 
