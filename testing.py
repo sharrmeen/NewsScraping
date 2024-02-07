@@ -61,7 +61,7 @@ else:
 
 # import openai
 
-# openai.api_key='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'
+# openai.api_key=''
 
 # response=openai.Completion.create(
 #     engine="gpt-3.5-turbo-instruct",
@@ -97,7 +97,7 @@ else:
 
 
 # # Example usage:
-# api_key = "460CBC23A1"
+# api_key = ""
 # url="https://www.livemint.com/news/india/modi-unveils-projects-worth-over-rs-1-330-crore-in-goa-11707221147382.html"
 # summary = summarize_url(url, api_key)
 # print(summary)
