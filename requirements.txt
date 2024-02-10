@@ -1,0 +1,5 @@
+newspaper3k==0.2.8
+nltk==3.8.1
+pytest==8.0.0
+Requests==2.31.0
+requests_html==0.10.0
